@@ -1,0 +1,14 @@
+{
+ "name":"sunday-parcel",
+ "displayName":"Sunday Parcel",
+ "description":"Read-only local receipt viewer for development evidence claims",
+ "version":"0.0.1",
+ "private":true,
+ "license":"UNLICENSED",
+ "engines":{"vscode":"^1.86.0"},
+ "categories":["Other"],
+ "main":"./extension.cjs",
+ "activationEvents":["onCommand:sundayParcel.inspectReceipt"],
+ "contributes":{"commands":[{"command":"sundayParcel.inspectReceipt","title":"Sunday Parcel: Inspect Local Receipt"}]},
+ "scripts":{"test":"node --test tests/*.test.cjs","check":"node --check extension.cjs && node --check src/receipt.cjs"}
+}
